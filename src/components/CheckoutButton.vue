@@ -19,6 +19,7 @@
         v-else 
         type="submit" 
         class="btn-next"
+        data-toggle="modal" data-target="#exampleModal"
       >
         確認下單
       </button>

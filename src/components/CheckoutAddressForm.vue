@@ -41,7 +41,7 @@
       <div class="form-item form-item-city">
         <label for="a-city">縣市</label>
         <div class="select-wrapper">
-          <select name="a-city" id="a-city" required>
+          <select name="a-city" id="a-city">
             <option value="" disabled selected>請選擇縣市</option>
             <option value="taipei">臺北市</option>
             <option value="newtaipei">新北市</option>

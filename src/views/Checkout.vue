@@ -32,6 +32,21 @@
         class="cart-panel"
       />
     </div>
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            {{formModal}}
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -82,6 +97,7 @@ export default {
     return {
       currentStep: 1,
       cartData: "",
+      formModal: ""
     };
   },
   methods: {
@@ -95,6 +111,7 @@ export default {
 
       for (let [name, value] of formData.entries()) {
         console.log("payment | " + name + ":" + value);
+        this.formModal += `${name}: ${value} |`
       }
     },
     afterStepUpdate(currentStep) {
