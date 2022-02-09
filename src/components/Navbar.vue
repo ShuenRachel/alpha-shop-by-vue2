@@ -1,11 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-    <router-link
-      class="navbar-brand"
-      to="/"
-    >
-      Alpha Shop
-    </router-link>
+    <router-link class="navbar-brand" to="/"> Alpha Shop </router-link>
 
     <button
       class="navbar-toggler"
@@ -19,24 +14,11 @@
       <span class="navbar-toggler-icon" />
     </button>
 
-    <div
-      id="navbarSupportedContent" 
-      class="navbar-collapse collapse"
-    >
+    <div id="navbarSupportedContent" class="navbar-collapse collapse">
       <div class="ml-auto d-flex align-items-center">
-        <router-link
-             to="#" 
-             class="text-info mr-3"
-        >
-         男款
-       </router-link>
+        <router-link to="#" class="text-info mr-3"> 男款 </router-link>
 
-          <router-link
-             to="#" 
-             class="text-info mr-3"
-          > 
-           男款
-         </router-link>
+        <router-link to="#" class="text-info mr-3"> 女款 </router-link>
       </div>
     </div>
   </nav>
