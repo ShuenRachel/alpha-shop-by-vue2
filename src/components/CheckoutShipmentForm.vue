@@ -2,7 +2,7 @@
   <div class="part part-shipping">
     <div class="form-title">運送方式</div>
     <div class="form-row d-flex">
-      <div class="form-item s-option">
+      <div class="form-item s-option" :class="{ checked: selectedShipment === 'standard'}" @click="selectedShipment = 'standard'">
         <input name="shipping-option" type="radio" value="standard" v-model="selectedShipment"/>
         <label class="d-flex" for="">
           <div class="s-title">
@@ -12,7 +12,7 @@
           <div class="s-price">免費</div>
         </label>
       </div>
-      <div class="form-item s-option">
+      <div class="form-item s-option" :class="{ checked: selectedShipment === 'dhl'}" @click="selectedShipment = 'dhl'">
         <input name="shipping-option" type="radio" value="dhl" v-model="selectedShipment" />
         <label class="d-flex" for="">
           <div class="s-title">
@@ -45,16 +45,23 @@ export default {
 @import "../assets/scss/main.scss";
 
 .part-shipping {
+
   .form-item {
     border: 1px solid #f0f0f5;
+    background: transparent;
     border-radius: 4px;
     width: 100%;
     height: 60px;
     padding: 20px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    // z-index: 0;
     &:nth-child(1) {
       margin-bottom: 24px;
+    }
+    &.checked {
+      border: 1px solid #000;
     }
     input {
       -webkit-appearance: none;
@@ -75,6 +82,7 @@ export default {
       flex: 1;
       display: flex;
       justify-content: space-between;
+      // z-index: -10;
       .s-title {
         display: flex;
         flex-direction: column;
@@ -86,7 +94,8 @@ export default {
         }
       }
       .s-price {
-        font-size: 12px;
+        padding-top: 3px;
+        font-size: 14px;
       }
     }
   }
