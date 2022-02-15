@@ -27,15 +27,5 @@ npm run build
 npm run lint
 ```
 
-### Checkout 'Checkout Page'
-To the given port with to following port:
-```
-<given port>/#/checkout
-```
-Here is an example:
-```
-http://localhost:8080/#/checkout
-```
-
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

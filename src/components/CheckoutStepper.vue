@@ -1,27 +1,24 @@
 <template>
   <div class="">
     <div id="step-control" class="stepper-wrapper">
-      <div 
+      <div
         class="step"
-        :class="[{active: currentStep === 1}, {checked: currentStep > 1}]"
+        :class="[{ active: currentStep === 1 }, { checked: currentStep > 1 }]"
       >
         <div class="step-icon"></div>
         <div class="step-title">寄送地址</div>
       </div>
-      <div 
+      <div
         class="step"
-        :class="[{active: currentStep === 2}, {checked: currentStep > 2}]"
+        :class="[{ active: currentStep === 2 }, { checked: currentStep > 2 }]"
       >
         <div class="step-icon"></div>
-        <span class="step-line"></span>
+        <span class="step-line step-line-first"></span>
         <div class="step-title">運送方式</div>
       </div>
-      <div 
-        class="step"
-        :class="{active: currentStep === 3}"
-      >
+      <div class="step" :class="{ active: currentStep === 3 }">
         <div class="step-icon"></div>
-        <span class="step-line"></span>
+        <span class="step-line step-line-second"></span>
         <div class="step-title">付款資訊</div>
       </div>
     </div>
@@ -33,14 +30,14 @@ export default {
   props: {
     currentStep: {
       type: Number,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">
-@import '../assets/scss/main.scss';
+@import "../assets/scss/main.scss";
 
 .stepper-wrapper {
   height: 32px;
@@ -79,7 +76,7 @@ export default {
       width: 32px;
       box-sizing: border-box;
       border: 1px solid $light-grey;
-      border-radius: 23px;
+      border-radius: 32px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -93,7 +90,7 @@ export default {
       }
       .step-icon::after {
         color: transparent;
-        text-shadow: 0 0 0 rgb(255, 255, 255)
+        text-shadow: 0 0 0 rgb(255, 255, 255);
       }
     }
 
@@ -109,8 +106,16 @@ export default {
       background-color: $light-grey;
       position: absolute;
       top: 50%;
-      left: calc(-50% + 48px);
-      right: calc(50% + 48px);
+
+      &-first {
+        left: calc(-50% + 20px);
+        right: calc(50% + 64px);
+      }
+
+      &-second {
+        left: calc(-50% + 60px);
+        right: calc(50% + 20px);
+      }
     }
   }
 }
