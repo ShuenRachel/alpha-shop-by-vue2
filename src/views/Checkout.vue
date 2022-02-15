@@ -139,11 +139,11 @@ export default {
 
 .stepper-panel,
 .form-panel {
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
 }
 
 .cart-panel {
-  grid-column: 8 / 13;
+  grid-column: 9 / 13;
   grid-row: 1 / 4;
 }
 

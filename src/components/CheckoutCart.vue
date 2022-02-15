@@ -1,7 +1,7 @@
 <template>
   <section class="cart-panel right-content" id="cart">
+    <h4 class="cart-title">購物籃</h4>
     <div class="cart-wrapper" id="cart">
-      <h4 class="cart-title">購物籃</h4>
       <div class="cart-list">
         <div
           class="cart-item"
@@ -138,13 +138,16 @@ export default {
   padding-left: 16px;
   padding-right: 16px;
 
+  .cart-title {
+    padding-top: 32px;
+    padding-bottom: 16px;
+    font-size: 18px;
+  }
+
   .cart-wrapper {
     @extend %cart-setting;
     border-bottom: $cart-border;
     font-size: 16px;
-    .cart-title {
-      display: none;
-    }
 
     .cart-list {
       width: 100%;
@@ -153,7 +156,10 @@ export default {
         display: flex;
         justify-content: space-between;
         &:nth-child(1) {
-          margin-bottom: 16px;
+          margin-bottom: 34px;
+        }
+        &:nth-child(2) {
+          margin-bottom: 2px;
         }
 
         &-img {
