@@ -1,12 +1,12 @@
-# twitter-front-end
-A twitter-like project built buy vue2
+# alpha-shop-vue
+A online store payment page built by vue2
 
 ## Feature
-* User can login into forum
-* Can view latest update of tweets, and tweets' replies, likes
-* Can post their own tweets
-* Can view top 10 users
-* Can view profile of specific user
+* User can control the form filling process
+* Changing signal according to form filling process
+* Can change the quantity of products
+* Amount will automatically update when change on quantity / shipment method changes
+
 ## Project setup
 ```
 npm install
